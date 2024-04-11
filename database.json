@@ -1,0 +1,17 @@
+[
+    {"class":"10",
+    "subjects":[
+        {"name":"maths",
+        "typeofcontent":[
+            {
+                "name":"boardpapers",
+                "links":[{
+                    "link":"",
+                    "year":"2021"
+                }]
+            }
+        ]
+    }
+    ]
+}
+]

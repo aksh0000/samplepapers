@@ -1,18 +1,15 @@
-const express = require('express');
-const app = express();
-const cors = require('cors');
-const path = require('path'); // Import path module to handle file paths
-
+const express=require('express');
+const app=express();
+const cors=require('cors');
+const path = require('path');
 app.use(cors());
+app.get('/',(req,res)=>{
+    res.send("working just fine!")
+})
 
-app.get('/file', (req, res) => {
-    // Resolve the absolute path to the PDF file
-    const filePath = path.resolve(__dirname, 'folder', 'pdf.pdf');
-    
-    // Send the file to the client
-    res.sendFile(filePath);
+app.get('/class:choosenclass/subject:choosensubject/contenttype:contenttype/choosenfile:choosenfile',(req,res)=>{
+    const filepath=path.resolve(__dirname,'folder',req.params.choosenclass,req.params.choosensubject,req.params.contenttype,req.params.choosenfile+".pdf");
+    res.sendFile(filepath);
 });
 
-app.listen(8000, () => {
-    console.log('Server is running on port 8000');
-});
+app.listen(8000);
