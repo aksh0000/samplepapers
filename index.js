@@ -27,7 +27,7 @@ app.get('/list/:class/:subject/:contenttype',(req,res)=>{
 
 
 app.get('/trial/:name',(req,res)=>{
-    const filepath=path.resolve(__dirname,'folder','10','maths','boardpapers','maths2013.pdf');
+    const filepath=path.resolve(__dirname,'folder','10','maths','boardpapers','13.pdf');
     console.log(req.params.name)
     res.sendFile(filepath)
 })
