@@ -33,7 +33,7 @@ app.get('/trial/:name',(req,res)=>{
 })
 
 app.get('/class/:choosenclass/:choosensubject/:contenttype/:choosenfile',(req,res)=>{
-    const filepath=path.resolve(__dirname,'folder',req.params.choosenclass,req.params.choosensubject,req.params.contenttype,req.params.choosenfile+".pdf");
+    const filepath=path.resolve(__dirname,'folder',req.params.choosenclass,req.params.choosensubject,req.params.contenttype,req.params.choosenfile);
     res.sendFile(filepath);
 });
 
